@@ -55,7 +55,6 @@ const ItemDetail = () => {
             {item.stock > 0 ? `Em estoque: ${item.stock} unidades` : 'Fora de estoque'}
           </p>
           
-          {/* Ação de Adicionar ao Carrinho */}
           <div className="item-detail-actions">
             {/* Usamos a classe 'button-primary' que definimos antes */}
             <button 
