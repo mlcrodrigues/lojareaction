@@ -331,6 +331,16 @@ h1 {
   margin-top: 40px;
 }
 
+.feedback-message {
+  color: #28a745; /* Verde sucesso */
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #e9f7eb;
+  border-radius: 8px;
+  text-align: center;
+}
+
 /* Em telas maiores (ex: 768px), mude para 2 colunas */
 @media (min-width: 768px) {
   .item-detail-layout {

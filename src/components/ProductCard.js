@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importe o Link
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product, onAddToCart }) => {
     const handleAddToCart = () => {
@@ -7,7 +7,6 @@ const ProductCard = ({ product, onAddToCart }) => {
     };
 
     return (
-        // Envolvemos o card com um Link para a página de detalhes
         <Link to={`/item/${product.id}`} className="product-card">
             <div className="product-image">
                 <img
@@ -17,23 +16,18 @@ const ProductCard = ({ product, onAddToCart }) => {
                 />
             </div>
             
-            {/* O conteúdo do card foi movido para dentro de um div 
-                para melhor controle do layout com flexbox */}
+            
             <div className="product-card-content">
                 <h3 className="product-title">{product.name}</h3>
-                
-                {/* A descrição foi removida da visualização em grade
-                   para manter os cards mais limpos.
-                   Ela aparecerá na página de detalhes. */}
-                
+
                 <div className="product-card-footer">
                     <p className="product-price">R$ {product.price.toFixed(2)}</p>
                     <button 
                         onClick={(e) => { 
-                            e.preventDefault(); // Impede o Link de navegar
+                            e.preventDefault();
                             handleAddToCart(); 
                         }} 
-                        className="button-primary" // << AQUI A MUDANÇA
+                        className="button-primary"
                     >
                         Adicionar
                     </button>

@@ -18,11 +18,14 @@ const ItemDetail = () => {
     return () => { mounted = false; };
   }, [id]);
 
-  // Função para lidar com a adição ao carrinho
+
   const handleAddToCart = () => {
     if (item) {
       addToCart(item, 1);
-      // (Opcional) Você pode adicionar um feedback aqui, como "Produto adicionado!"
+      setFeedbackMessage('Produto adicionado ao carrinho!'); // Mostra a mensagem
+      setTimeout(() => {
+        setFeedbackMessage(''); // Esconde a mensagem após 3 segundos
+      }, 3000); // 3000ms = 3 segundos
     }
   };
 
@@ -31,10 +34,10 @@ const ItemDetail = () => {
 
   return (
     <div className="container item-detail">
-      {/* Layout de duas colunas (imagem e conteúdo) */}
+      
       <div className="item-detail-layout">
 
-        {/* Coluna da Imagem */}
+        
         <div className="item-detail-image">
           <img
             src={encodeURI(item.image || '/img/placeholder.png')}
@@ -43,7 +46,7 @@ const ItemDetail = () => {
           />
         </div>
 
-        {/* Coluna do Conteúdo */}
+        
         <div className="item-detail-content">
           <h2 className="item-detail-title">{item.name}</h2>
           
@@ -55,9 +58,8 @@ const ItemDetail = () => {
             {item.stock > 0 ? `Em estoque: ${item.stock} unidades` : 'Fora de estoque'}
           </p>
           
-          {/* Ação de Adicionar ao Carrinho */}
           <div className="item-detail-actions">
-            {/* Usamos a classe 'button-primary' que definimos antes */}
+          
             <button 
               onClick={handleAddToCart} 
               className="button-primary"
@@ -66,6 +68,9 @@ const ItemDetail = () => {
               {item.stock > 0 ? 'Adicionar ao Carrinho' : 'Indisponível'}
             </button>
           </div>
+          <p className="feedback-message">
+              {feedbackMessage}
+            </p>
         </div>
       </div>
     </div>

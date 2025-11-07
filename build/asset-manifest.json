@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mlcrodrigues/lojareaction/static/css/main.fb2ca621.css",
+    "main.js": "/mlcrodrigues/lojareaction/static/js/main.88df7815.js",
+    "index.html": "/mlcrodrigues/lojareaction/index.html",
+    "main.fb2ca621.css.map": "/mlcrodrigues/lojareaction/static/css/main.fb2ca621.css.map",
+    "main.88df7815.js.map": "/mlcrodrigues/lojareaction/static/js/main.88df7815.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb2ca621.css",
+    "static/js/main.88df7815.js"
+  ]
+}
