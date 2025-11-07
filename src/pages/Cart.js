@@ -24,9 +24,9 @@ const Cart = () => {
                         <div className="cart-row">
                             <div className="product-image">
                                 <img
-                                    src={encodeURI(item.image || '/img/placeholder.jpg')}
+                                    src={encodeURI(item.image || "")}
                                     alt={item.name}
-                                    onError={(e) => { e.target.onerror = null; e.target.src = '/img/placeholder.jpg'; }}
+                                    onError={(e) => { e.target.onerror = null; e.target.src = "/img/placeholder.jpg"; }}
                                 />
                             </div>
 
