@@ -1,7 +1,7 @@
 {
   "name": "lojareaction",
   "version": "1.0.0",
-  "homepage": "https://github.com/mlcrodrigues/lojareaction",
+  "homepage": "https://mlcrodrigues.github.io/lojareaction",
   "description": "This project is a responsive webstore built using JavaScript and React. It provides a user-friendly interface for browsing and purchasing products.",
   "main": "index.js",
   "scripts": {
