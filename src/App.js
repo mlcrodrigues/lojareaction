@@ -10,7 +10,7 @@ import './styles/main.css';
 function App() {
   return (
     <CartContextProvider>
-      <BrowserRouter basename="/lojareaction">
+      <BrowserRouter basename={"/lojareaction"}>
         <header className="header container">
           <Link to="/" className="logo">REACTION STORE</Link>
           <CartWidget />
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          
+          <Route path="src/pages/ItemDetail.js" element={<ItemDetail />} /> 
           <Route path="/item/:id" element={<ItemDetail />} /> 
         </Routes>
         
