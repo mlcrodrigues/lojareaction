@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lojareaction/static/css/main.fb2ca621.css",
-    "main.js": "/lojareaction/static/js/main.64d50b7c.js",
+    "main.js": "/lojareaction/static/js/main.e94e74f4.js",
     "index.html": "/lojareaction/index.html",
     "main.fb2ca621.css.map": "/lojareaction/static/css/main.fb2ca621.css.map",
-    "main.64d50b7c.js.map": "/lojareaction/static/js/main.64d50b7c.js.map"
+    "main.e94e74f4.js.map": "/lojareaction/static/js/main.e94e74f4.js.map"
   },
   "entrypoints": [
     "static/css/main.fb2ca621.css",
-    "static/js/main.64d50b7c.js"
+    "static/js/main.e94e74f4.js"
   ]
 }
