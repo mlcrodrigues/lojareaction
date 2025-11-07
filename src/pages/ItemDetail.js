@@ -40,9 +40,9 @@ const ItemDetail = () => {
         
         <div className="item-detail-image">
           <img
-            src={encodeURI(item.image || '/img/placeholder.png')}
+            src={encodeURI(item.image || 'build/img 2/placeholder.jpg')}
             alt={item.name}
-            onError={(e) => { e.target.onerror = null; e.target.src = '/img/placeholder.png'; }}
+            onError={(e) => { e.target.onerror = null; e.target.src = 'build/img 2/placeholder.jpg'; }}
           />
         </div>
 
