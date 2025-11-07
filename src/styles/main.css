@@ -417,6 +417,101 @@ h1 {
   background-color: #c0c0c0;
   cursor: not-allowed;
 }
+/* O container principal do contador e botão */
+.item-count-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 300px;
+}
+
+/* A caixa com os botões +/- e o número */
+.item-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Para os botões se alinharem */
+}
+
+.counter-button {
+  background-color: #f1f1f1;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background-color 0.2s;
+}
+.counter-button:hover {
+  background-color: #e9e9e9;
+}
+
+.counter-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.checkout-form-page h2 {
+  margin-bottom: 24px;
+}
+
+.checkout-form {
+  max-width: 500px; /* Limita a largura do formulário */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Tela de sucesso do pedido */
+.checkout-success {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.checkout-success h2 {
+  color: #28a745; /* Verde */
+  margin-bottom: 16px;
+}
+
+.checkout-success p {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.checkout-success strong {
+  font-size: 1.3rem;
+  color: #333;
+  background-color: #f1f1f1;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
 
 @media (max-width: 768px) {
     .product-card {

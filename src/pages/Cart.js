@@ -24,9 +24,9 @@ const Cart = () => {
                         <div className="cart-row">
                             <div className="product-image">
                                 <img
-                                    src={encodeURI(item.image || '/img/placeholder.png')}
+                                    src={encodeURI(item.image || '/img/placeholder.jpg')}
                                     alt={item.name}
-                                    onError={(e) => { e.target.onerror = null; e.target.src = '/img/placeholder.png'; }}
+                                    onError={(e) => { e.target.onerror = null; e.target.src = '/img/placeholder.jpg'; }}
                                 />
                             </div>
 
@@ -48,7 +48,10 @@ const Cart = () => {
             <div className="cart-summary">
                 <h3>Total do pedido: R$ {calcTotal().toFixed(2)}</h3>
                 <button onClick={removeList} className="button-secondary">Limpar carrinho</button>
-                <button className="button-primary">Finalizar Compra</button>
+                
+                <Link to="/checkout" className="button-primary">
+                  Finalizar Compra
+                </Link>
             </div>
         </div>
     );
