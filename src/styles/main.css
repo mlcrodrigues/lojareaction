@@ -1,0 +1,415 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+h1 {
+    color: #6e3451;
+    text-align: right;
+    margin-top: 20px;
+    font: bold 36px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  
+  /* Opcional: faz o header "flutuar" no topo */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+/* Estilo do Logo */
+.logo {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  color: #333;
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Estilo do Ícone do Carrinho (CartWidget) */
+.cart-widget {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove o sublinhado */
+  color: #555;
+}
+
+.cart-icon {
+  font-size: 1.8rem; /* 28px */
+}
+
+/* A "bolinha" vermelha com o número */
+.cart-count {
+  background-color: #e63946; /* Um tom de vermelho */
+  color: white;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 600;
+  border-radius: 50%; /* Deixa redondo */
+  
+  /* Ajusta o tamanho e posição */
+  padding: 3px 7px;
+  margin-left: 8px;
+  
+  /* Bônus: para centralizar o número perfeitamente */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 15px; 
+}
+
+.home {
+    padding: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* A GRADE DE PRODUTOS
+   Usamos CSS Grid para criar uma grade responsiva
+*/
+.product-list {
+  display: grid;
+  /* Cria colunas automáticas: no mínimo 250px, 
+     mas elas se esticam para preencher o espaço (1fr) */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px; /* Espaçamento entre os cards */
+}
+
+
+/* =================================
+   ESTILOS DO CARD DE PRODUTO
+   ================================= */
+
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Garante que a imagem não vaze */
+  text-decoration: none; /* Remove sublinhado do Link */
+  color: #333;
+  
+  /* Layout Flex para organizar o card verticalmente */
+  display: flex;
+  flex-direction: column;
+  
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Container da imagem */
+.product-card .product-image {
+  width: 100%;
+  /* Proporção 1:1 (quadrada) */
+  aspect-ratio: 1 / 1; 
+  background-color: #f9f9f9;
+}
+
+.product-card .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mostra a imagem inteira */
+}
+
+/* Conteúdo abaixo da imagem */
+.product-card-content {
+  padding: 16px;
+  /* Faz o conteúdo crescer para preencher o espaço */
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  /* Ocupa o espaço e deixa o rodapé no final */
+  flex-grow: 1; 
+}
+
+/* Rodapé do card (preço + botão) */
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px; /* Espaço entre o título e o rodapé */
+}
+
+.product-card .product-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #007bff;
+  margin: 0;
+}
+
+/* Ajusta o botão "Adicionar" para ser menor no card */
+.product-card .button-primary {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.cart-page h2 {
+  margin-bottom: 24px;
+}
+
+.cart-list {
+  list-style: none; /* Remove as "bolinhas" da lista */
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada item da lista */
+.cart-item {
+  border-bottom: 1px solid #eee;
+  padding: 24px 0;
+}
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* A linha que contém imagem, detalhes e botão */
+.cart-row {
+  display: flex;
+  gap: 16px; /* Espaçamento entre os elementos */
+  align-items: center;
+}
+
+/* Container da imagem */
+.cart-row .product-image {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0; /* Impede que a imagem encolha */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* A imagem em si */
+.cart-row .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garante que a imagem caiba */
+}
+
+/* Container dos detalhes (nome, preço, etc) */
+.cart-row .item-details {
+  flex-grow: 1; /* Faz esta div ocupar o espaço que sobra */
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Espaço entre as linhas de texto */
+}
+
+.cart-row .item-details strong {
+  font-size: 1.1rem;
+}
+
+/* O resumo no final da página */
+.cart-summary {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid #ddd;
+  
+  /* Alinha tudo à direita */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px; /* Espaço entre o total e os botões */
+}
+
+.cart-summary h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* Quando o carrinho está vazio */
+.cart-empty {
+  text-align: center;
+  padding: 60px 0;
+}
+.cart-empty h2 {
+  margin-bottom: 24px;
+}
+
+
+/* =================================
+   BOTÕES GLOBAIS (Bônus)
+   ================================= */
+
+/* Botão principal (Finalizar, Adicionar) */
+.button-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block; /* Para o <Link> parecer um botão */
+  transition: background-color 0.2s;
+}
+.button-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Botão secundário (Limpar Carrinho) */
+.button-secondary {
+  background-color: #f1f1f1;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.button-secondary:hover {
+  background-color: #e9e9e9;
+}
+
+/* Botão de remover (vermelho, sem fundo) */
+.button-remove {
+  background: none;
+  border: none;
+  color: #e63946;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 8px;
+}
+.button-remove:hover {
+  text-decoration: underline;
+}
+
+.item-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 coluna por padrão (mobile) */
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* Em telas maiores (ex: 768px), mude para 2 colunas */
+@media (min-width: 768px) {
+  .item-detail-layout {
+    /* 1fr 1fr = duas colunas de tamanho igual */
+    grid-template-columns: 1fr 1fr; 
+    gap: 48px;
+  }
+}
+
+/* Coluna da Imagem */
+.item-detail-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Força a ser um quadrado */
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden; /* Para a imagem não vazar */
+}
+
+.item-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mostra a imagem inteira */
+}
+
+/* Coluna do Conteúdo (Texto) */
+.item-detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-detail-title {
+  font-size: 2.5rem; /* Título bem grande */
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.item-detail-price {
+  font-size: 2rem; /* Preço grande */
+  font-weight: 700;
+  color: #007bff; /* Cor primária (azul) */
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.item-detail-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  /* flex-grow: 1; (Opcional: empurra o botão para baixo) */
+}
+
+.item-detail-stock {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+  margin-top: 24px;
+}
+
+.item-detail-actions {
+  margin-top: 16px;
+}
+
+/* Deixa o botão de adicionar grande */
+.item-detail-actions .button-primary {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+
+/* Estilo do botão quando desabilitado */
+.item-detail-actions .button-primary:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        margin: 10px 0;
+    }
+}
